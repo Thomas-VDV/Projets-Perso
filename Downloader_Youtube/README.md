@@ -20,11 +20,12 @@ Make sure you have the following installed:
 - `eyed3`
 - `requests`
 - `argparse`
+- `ffmpeg`
   
 To install the required Python libraries, run:
 
 ```bash
-pip install pytube moviepy yt-dlp eyed3 requests argparse
+pip install pytube moviepy yt-dlp eyed3 requests argparse ffmpeg
 ```
 
 ## Usage
@@ -32,19 +33,19 @@ pip install pytube moviepy yt-dlp eyed3 requests argparse
 1. **Download a single video:**
 
     ```bash
-    python script.py <YouTube_URL>
+    python downloader_youtube.py <YouTube_URL>
     ```
 
 2. **Download audio only (MP3 format):**
 
     ```bash
-    python script.py <YouTube_URL> -mp3
+    python downloader_youtube.py <YouTube_URL> -mp3
     ```
 
 3. **Download a playlist:**
 
     ```bash
-    python script.py <Playlist_URL> -p
+    python downloader_youtube.py <Playlist_URL> -p
     ```
 
 4. **Download a list of videos (URLs in a file, one per line):**
@@ -52,13 +53,13 @@ pip install pytube moviepy yt-dlp eyed3 requests argparse
     - For a list of individual videos:
 
         ```bash
-        python script.py <file_with_urls.txt> -l
+        python downloader_youtube.py <file_with_urls.txt> -l
         ```
 
     - For a list of playlists:
 
         ```bash
-        python script.py <file_with_urls.txt> -l -p
+        python downloader_youtube.py <file_with_urls.txt> -l -p
         ```
 
 ## How It Works
@@ -70,5 +71,4 @@ pip install pytube moviepy yt-dlp eyed3 requests argparse
 
 ## Notes
 
-- Make sure you have `ffmpeg` installed if converting videos to MP3.
 - The script automatically skips already downloaded files.
